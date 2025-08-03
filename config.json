@@ -1,0 +1,28 @@
+{
+    "alert_cooldown": 30,
+    "detection_confidence": 0.5,
+    "tracking_confidence": 0.5,
+    "posture_thresholds": {
+        "neck_angle_min": 160,
+        "shoulder_slope_max": 0.05,
+        "head_forward_threshold": 0.02
+    },
+    "ui_settings": {
+        "window_width": 600,
+        "window_height": 700,
+        "camera_width": 460,
+        "camera_height": 340
+    },
+    "camera_settings": {
+        "camera_index": 0,
+        "frame_width": 640,
+        "frame_height": 480,
+        "fps": 30
+    },
+    "notifications": {
+        "enabled": true,
+        "title": "SitSense - Posture Alert",
+        "message": "Poor posture detected! Please adjust your position.",
+        "timeout": 3
+    }
+}
