@@ -25,5 +25,5 @@
         "message": "Poor posture detected! Please adjust your position.",
         "timeout": 3
     },
-    "detection_mode": "basic"
+    "detection_mode": "full"
 }
