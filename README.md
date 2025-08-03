@@ -7,7 +7,7 @@ SitSense is a real-time posture monitoring application that uses your webcam and
 
 SitSense is a complete minimalist posture detection application with a Nothing OS-inspired design that:
 
-- **Monitors posture in real-time** using your webcam and MediaPipe AI
+- **Monitors posture in real-time** using your webcam and CVZone AI
 - **Features a sleek black-and-white UI** with glassy effects and rounded corners
 - **Provides smart alerts** with customizable cooldown periods
 - **Shows live webcam preview** with posture landmarks overlay
@@ -18,7 +18,7 @@ SitSense is a complete minimalist posture detection application with a Nothing O
 
 ### Core Functionality
 - ✅ **Real-time webcam capture and processing**
-- ✅ **MediaPipe pose detection integration**
+- ✅ **CVZone pose detection integration**
 - ✅ **Posture analysis** (neck angle, shoulder alignment, head position)
 - ✅ **Smart alert system** with cooldown
 - ✅ **Desktop notifications** using Plyer
@@ -92,7 +92,7 @@ SitSense/
 ### Dependencies
 - **CustomTkinter**: Modern UI framework
 - **OpenCV**: Camera capture and image processing
-- **MediaPipe**: AI-powered pose detection
+- **CVZone**: AI-powered pose detection (wrapper for MediaPipe)
 - **Pillow**: Image manipulation
 - **Plyer**: Cross-platform notifications
 - **NumPy**: Numerical computations
@@ -211,7 +211,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **MediaPipe** by Google for pose detection
+- **CVZone** by Google MediaPipe for pose detection
 - **CustomTkinter** for the modern UI framework
 - **Nothing** for design inspiration
 - **OpenCV** for computer vision capabilities

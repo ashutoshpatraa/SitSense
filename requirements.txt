@@ -1,6 +1,6 @@
 customtkinter
 opencv-python
-mediapipe
+cvzone
 pillow
 numpy
 plyer

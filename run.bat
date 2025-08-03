@@ -7,14 +7,16 @@ echo    SitSense - Posture Detection App
 echo ========================================
 echo.
 
-REM Check if Python is installed
-python --version >nul 2>&1
-if errorlevel 1 (
-    echo [ERROR] Python is not installed or not in PATH
-    echo Please install Python 3.7+ from https://python.org
+REM Check if virtual environment exists
+if not exist ".venv\Scripts\python.exe" (
+    echo [ERROR] Virtual environment not found
+    echo Please run: python -m venv .venv
+    echo Then: pip install -r requirements.txt
     pause
     exit /b 1
 )
+
+echo [INFO] Using Python 3.10 virtual environment
 
 REM Check if required files exist
 if not exist "sitsense.py" (
@@ -34,14 +36,14 @@ if not exist "requirements.txt" (
 echo [INFO] Checking dependencies...
 
 REM Try to import required modules
-python -c "import customtkinter, cv2, mediapipe, plyer, PIL" >nul 2>&1
+.venv\Scripts\python.exe -c "import customtkinter, cv2, mediapipe, plyer, PIL" >nul 2>&1
 if errorlevel 1 (
     echo [WARN] Some dependencies are missing
     echo [INFO] Installing dependencies...
-    pip install -r requirements.txt
+    .venv\Scripts\pip.exe install -r requirements.txt
     if errorlevel 1 (
         echo [ERROR] Failed to install dependencies
-        echo Please run: pip install -r requirements.txt
+        echo Please run: .venv\Scripts\pip.exe install -r requirements.txt
         pause
         exit /b 1
     )
@@ -51,7 +53,7 @@ echo [INFO] Starting SitSense...
 echo [INFO] Press Ctrl+C to stop
 echo.
 
-python sitsense.py
+.venv\Scripts\python.exe sitsense.py
 
 if errorlevel 1 (
     echo.
